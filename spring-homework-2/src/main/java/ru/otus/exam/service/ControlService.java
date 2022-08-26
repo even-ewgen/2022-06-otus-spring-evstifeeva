@@ -4,6 +4,6 @@ import ru.otus.exam.domain.StudentCard;
 
 public interface ControlService {
 
-    void control(StudentCard studentCard);
+    boolean control(StudentCard studentCard);
 
 }

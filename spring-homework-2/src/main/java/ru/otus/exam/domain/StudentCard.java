@@ -11,7 +11,8 @@ import lombok.Setter;
 @Setter
 public class StudentCard {
 
-    String firstName;
-    String lastName;
-    int score;
+    private String firstName;
+    private String lastName;
+    private int score;
+    private boolean isPass;
 }

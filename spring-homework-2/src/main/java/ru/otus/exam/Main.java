@@ -4,8 +4,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import ru.otus.exam.domain.Answer;
-import ru.otus.exam.domain.Question;
 import ru.otus.exam.service.ExamService;
 
 @Configuration

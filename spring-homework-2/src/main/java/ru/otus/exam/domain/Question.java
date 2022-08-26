@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 public class Question {
 
-    String question;
-    List<Answer> answers;
-    int rightAnswer;
+    private String question;
+    private List<Answer> answers;
+    private int rightAnswer;
 }

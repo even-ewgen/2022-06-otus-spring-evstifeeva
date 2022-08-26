@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter
 public class Answer {
 
-    String answer;
-    boolean isRight;
+    private String answer;
+    private boolean isRight;
 }
