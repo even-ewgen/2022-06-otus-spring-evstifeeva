@@ -9,8 +9,9 @@ import org.springframework.context.MessageSource;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @DisplayName("Сервис запуска тестирования")
@@ -21,7 +22,7 @@ class ExamServiceTest {
 
     private ExamService examineService;
 
-    private PrinterService printerServiceMock;
+    private MessageSource messageSourceMock;
 
     private ControlService controlServiceMock;
     private ReaderService readerService;
@@ -34,9 +35,17 @@ class ExamServiceTest {
 
         controlServiceMock = mock(ControlService.class);
 
-        printerServiceMock = mock(PrinterService.class);
+        messageSourceMock = mock(MessageSource.class);
+        when(messageSourceMock.getMessage("exam.congrats.string", null, Locale.forLanguageTag("en-EN")))
+                .thenReturn("Congrats, you pass!");
+        when(messageSourceMock.getMessage("exam.fail.string", null, Locale.forLanguageTag("en-EN")))
+                .thenReturn("You need to study more.");
+        when(messageSourceMock.getMessage("exam.score.string", null, Locale.forLanguageTag("en-EN")))
+                .thenReturn("1");
 
-        examineService = new ExamServiceImpl(controlServiceMock, readerService, printerServiceMock);
+        PrinterService printerService = new PrinterServiceImpl(messageSourceMock, "en-EN");
+
+        examineService = new ExamServiceImpl(controlServiceMock, readerService, printerService);
     }
 
     @AfterEach

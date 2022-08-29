@@ -25,7 +25,7 @@ class ControlServiceTest {
 
     @BeforeEach
     private void setUp() {
-        dao = new QuestionDaoImpl("/questions", "en-EN");
+        dao = new QuestionDaoImpl("questions", "en-EN");
 
         readerServiceMock = mock(ReaderService.class);
 

@@ -17,7 +17,7 @@ class QuestionDaoImplTest {
 
     @BeforeEach
     protected void setup() {
-        questionDao = new QuestionDaoImpl("/questions", "en-EN");
+        questionDao = new QuestionDaoImpl("questions", "en-EN");
     }
 
     @Test
