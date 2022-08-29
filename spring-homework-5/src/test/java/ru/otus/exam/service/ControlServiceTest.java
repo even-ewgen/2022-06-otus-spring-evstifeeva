@@ -3,15 +3,16 @@ package ru.otus.exam.service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.context.MessageSource;
 import ru.otus.exam.dao.QuestionDao;
 import ru.otus.exam.dao.QuestionDaoImpl;
 import ru.otus.exam.domain.StudentCard;
 
 import java.io.IOException;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @DisplayName("Сервис сбора ответов студента")
 class ControlServiceTest {

@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 @DisplayName("Сервис запуска тестирования")
