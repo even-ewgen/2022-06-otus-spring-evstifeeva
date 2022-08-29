@@ -23,7 +23,6 @@ class ExamServiceTest {
     private ExamService examineService;
 
     private MessageSource messageSourceMock;
-    private PrinterService printerServiceMock;
 
     private ControlService controlServiceMock;
     private ReaderService readerService;
