@@ -1,0 +1,15 @@
+shb
+sha
+shg
+
+ada -f test -l testov
+ada -f test -m testovich
+
+adg test
+
+adb -t Test -a 2 -g 5
+
+del 3
+
+up 6 -a 4 -g 3
+up 6 -t testest
