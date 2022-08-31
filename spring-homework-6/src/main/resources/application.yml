@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5434/postgres
+    username: postgres
+    password: 12345678
+    driverClassName: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: schema.sql
+      data-locations: data.sql
+      enabled: true
